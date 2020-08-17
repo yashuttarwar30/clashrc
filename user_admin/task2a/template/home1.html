@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1>Log In</h1>
+{% if message %}
+ {{message}}
+{% end if%}
+
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <small>email id:</small>
+    <input type="text" name="email"><p>
+    <button type="submit">Login</button>
+
+</form>
+</body>
+</html>

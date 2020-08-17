@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1>Sign Up</h1>
+{% if message %}
+ {{message}}
+{% end if%}
+
+<body>
+<form method="POST">
+    {% csrf_token %}
+
+    <small>firstname:</small>
+    <input type="text" name="fname"><p>
+    <small>lastname:</small>
+    <input type="text" name="lname"><p>
+    <small>email id:</small>
+    <input type="text" name="email"><p>
+    <small>contact number:</small>
+    <input type="number" name="phno"><p>
+     Gender :<br><br>
+    <input type="radio" name="gender" value="Male">Male<br><br>
+    <input type="radio" name="gender" value="Female">Female<br><br>
+    <input type="radio" name="gender" value="None">None<br><br>
+    <button type="submit">CREATE</button>
+
+
+</form>
+<a href = "{% url 'home1' %}">log in</a><br><br>
+
+</body>
+</html>
